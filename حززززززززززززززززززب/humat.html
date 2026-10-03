@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حزب حماة الوطن - أمانة الشوبك الغربي</title>
+    <!-- خط تجوال -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #070f1e;
+            --card-dark: #0d1b2a;
+            --accent-gold: #d4af37;
+            --accent-gold-hover: #f39c12;
+            --text-light: #ffffff;
+            --text-muted: #a0aec0;
+            --border-color: rgba(212, 175, 55, 0.2);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* الهيدر العلوي */
+        header {
+            background-color: var(--bg-dark);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .header-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #1b2a4a, #0d1b2a);
+            border: 2px solid var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 18px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-gold);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-gold);
+            color: var(--bg-dark);
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--accent-gold-hover);
+        }
+
+        /* واجهة البطل (Hero Section) */
+        .hero {
+            background: radial-gradient(circle at center, #112240 0%, #070f1e 100%);
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 700px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--accent-gold);
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .hero h2 span {
+            color: var(--accent-gold);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .hero-emblem {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-gold);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(13, 27, 42, 0.8);
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
+            text-align: center;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .hero-emblem i {
+            font-size: 3.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+
+        .hero-emblem h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .hero-emblem p {
+            font-size: 0.75rem;
+            color: var(--accent-gold);
+        }
+
+        /* المحتوى الرئيسي */
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 8px;
+        }
+
+        .section-title h2 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-gold);
+            border-radius: 2px;
+        }
+
+        /* عن الأمانة */
+        .about-section {
+            background-color: var(--card-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--accent-gold);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.6rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .about-features {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(7, 15, 30, 0.6);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-item i {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+        }
+
+        .feature-item h4 {
+            font-size: 1.1rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        /* الفعاليات والأنشطة */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .event-card {
+            background-color: var(--card-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+        }
+
+        .event-top-banner {
+            background: linear-gradient(135deg, #112240, #070f1e);
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--accent-gold);
+            position: relative;
+        }
+
+        .event-badge-top {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background-color: var(--accent-gold);
+            color: var(--bg-dark);
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 700;
+        }
+
+        .event-top-banner h3 {
+            font-size: 1.4rem;
+            color: #fff;
+            font-weight: 800;
+        }
+
+        .event-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .event-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .event-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .event-desc {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .event-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 15px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .event-location {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .event-btn {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--accent-gold);
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .event-btn:hover {
+            background-color: var(--accent-gold);
+            color: var(--bg-dark);
+        }
+
+        /* كروت المسؤولين */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: var(--card-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            border-top: 4px solid var(--accent-gold);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.12);
+            border-color: var(--accent-gold);
+        }
+
+        .card-img-box {
+            width: 110px;
+            height: 110px;
+            margin: 25px auto 10px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--accent-gold);
+            background-color: #1b2a4a;
+        }
+
+        .card-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px 20px 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--accent-gold);
+            font-size: 0.78rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            align-self: center;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .card-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .card-role {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* الشكاوى والمقترحات */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-box {
+            background-color: var(--card-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 40px;
+            border-right: 5px solid var(--accent-gold);
+        }
+
+        .contact-info-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-card {
+            background-color: var(--card-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+        }
+
+        .info-card h4 {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .info-item i {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            margin-top: 4px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.span-2 {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--accent-gold);
+            font-size: 0.95rem;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            padding: 12px 15px;
+            background-color: #070f1e;
+            border: 1px solid var(--border-color);
+            color: #fff;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            grid-column: span 2;
+            background-color: #10B981;
+            color: #fff;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #059669;
+        }
+
+        /* التذييل */
+        footer {
+            background-color: var(--card-dark);
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            padding: 40px 20px 20px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: right;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .footer-col h4 {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-gold);
+            padding-right: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            width: 38px;
+            height: 38px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--border-color);
+            color: var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background-color: var(--accent-gold);
+            color: var(--bg-dark);
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .copyright span {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        @media (max-width: 900px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 10px;
+                justify-content: center;
+            }
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-group.span-2 {
+                grid-column: span 1;
+            }
+            .submit-btn {
+                grid-column: span 1;
+            }
+            .footer-content {
+                text-align: center;
+            }
+            .social-icons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo-area">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>حزب حماة الوطن</h1>
+                    <p>أمانة الشوبك الغربي</p>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
+                    <li><a href="#about"><i class="fa-solid fa-circle-info"></i> عن الأمانة</a></li>
+                    <li><a href="#board"><i class="fa-solid fa-users"></i> هيئة المكتب</a></li>
+                    <li><a href="#events"><i class="fa-solid fa-calendar-days"></i> الفعاليات</a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-headset"></i> الشكاوي</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-btn">
+                <i class="fa-solid fa-pen-to-square"></i> قدم مقترحاً
+            </a>
+        </div>
+    </header>
+
+    <!-- واجهة البطل -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-star"></i> أمانة الشوبك الغربي - نعمل من أجل المواطن
+                </div>
+                <h2>معاً لبناء مستقبل أفضل في <span>الشوبك الغربي</span></h2>
+                <p>نحن في حزب حماة الوطن نؤمن بأن خدمة المواطن المصري هي غايتنا الأولى، ونسعى دائماً لتفعيل دور المشاركة المجتمعية وحل مشاكل أهالينا بالشوبك الغربي بكل تفان وإخلاص.</p>
+            </div>
+            <div class="hero-emblem">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>حماة الوطن</h3>
+                <p>حب الوطن فرض علينا وخدمة أهله شرف</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- المحتوى -->
+    <div class="container">
+        
+        <!-- قسم عن الأمانة -->
+        <section id="about" class="about-section">
+            <div class="section-title" style="margin-bottom: 25px;">
+                <h2>عن أمانة الشوبك الغربي</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>رؤيتنا ورسالتنا المجتمعية</h3>
+                    <p>تأسست أمانة الشوبك الغربي لتكون حلقة الوصل الحقيقية بين المواطنين والجهات المعنية، وتقديم خدمات مجتمعية متكاملة ترتقي بمستوى المعيشة وتلبي احتياجات أهالينا في كافة القطاعات.</p>
+                    <p>نعمل بروح الفريق الواحد من خلال لجان متخصصة لتلقي الشكاوى والمقترحات والعمل على حلها بشكل دائم ومستمر.</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-bullseye"></i>
+                        <div>
+                            <h4>هدفنا الأساسي</h4>
+                            <p style="color: var(--text-muted); font-size: 0.88rem;">خدمة أهالي الشوبك الغربي وحل مشاكلهم الخدمية</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                        <div>
+                            <h4>مشاركة مجتمعية فعالة</h4>
+                            <p style="color: var(--text-muted); font-size: 0.88rem;">تنظيم قوافل ومؤتمرات ومبادرات خدمية للطلاب والأهالي</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الفعاليات والأنشطة الجماهيرية -->
+        <section id="events">
+            <div class="section-title">
+                <h2>الفعاليات والأنشطة الجماهيرية</h2>
+                <p>تابع أحدث المبادرات واللقاءات والفعاليات التي تقيمها أمانة الشوبك الغربي</p>
+            </div>
+
+            <div class="events-grid">
+                
+                <!-- فعالية مبادرة طيبة الجديدة -->
+                <div class="event-card">
+                    <div class="event-top-banner">
+                        <span class="event-badge-top">مبادرات تعليمية وخدمية</span>
+                        <h3>مبادرة طيبة</h3>
+                    </div>
+                    <div class="event-content">
+                        <div>
+                            <div class="event-meta">
+                                <i class="fa-regular fa-calendar"></i> بدءاً من 1 أكتوبر 2026
+                            </div>
+                            <h4 class="event-title">توفير باصات لنقل الطلاب من الشوبك إلى المنيب</h4>
+                            <p class="event-desc">حرصاً على مصلحة أبنائنا الطلاب ورفع العبء عن كاهل أولياء الأمور، أطلقت الأمانة مبادرة طيبة لتوفير باصات نقل مخصصة للطلاب من مدخل الشوبك الغربي القديم والجديد وحتى محطة المنيب.</p>
+                        </div>
+                        <div class="event-footer">
+                            <span class="event-location"><i class="fa-solid fa-location-dot"></i> من الشوبك إلى المنيب</span>
+                            <a href="#contact" class="event-btn">مستمرة</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- فعالية 1 -->
+                <div class="event-card">
+                    <div class="event-top-banner">
+                        <span class="event-badge-top">مبادرات إجتماعية</span>
+                        <h3>Community Support</h3>
+                    </div>
+                    <div class="event-content">
+                        <div>
+                            <div class="event-meta">
+                                <i class="fa-regular fa-calendar"></i> 14 فبراير 2026
+                            </div>
+                            <h4 class="event-title">توزيع مواد غذائية على الأسر الأولى بالرعاية</h4>
+                            <p class="event-desc">في إطار الدور المجتمعي للحزب، قامت أمانة الشوبك الغربي بتوزيع مواد الدعم الغذائي على الأسر الأكثر احتياجاً برعاية قيادات الأمانة.</p>
+                        </div>
+                        <div class="event-footer">
+                            <span class="event-location"><i class="fa-solid fa-location-dot"></i> الشوبك الغربي</span>
+                            <a href="#contact" class="event-btn">تم بنجاح</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- فعالية 2 -->
+                <div class="event-card">
+                    <div class="event-top-banner">
+                        <span class="event-badge-top">لقاءات جماهيرية</span>
+                        <h3>Youth Meeting</h3>
+                    </div>
+                    <div class="event-content">
+                        <div>
+                            <div class="event-meta">
+                                <i class="fa-regular fa-calendar"></i> 28 فبراير 2026
+                            </div>
+                            <h4 class="event-title">مؤتمر جماهيري موسع لمناقشة احتياجات الشباب</h4>
+                            <p class="event-desc">عقدت أمانة الشوبك الغربي لقاءً مفتوحاً مع شباب القرية للاستماع إلى مقترحاتهم وطموحاتهم وسبل دعم الأنشطة الرياضية والثقافية المحلية.</p>
+                        </div>
+                        <div class="event-footer">
+                            <span class="event-location"><i class="fa-solid fa-location-dot"></i> مقر الشباب</span>
+                            <a href="#contact" class="event-btn">تم بنجاح</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- فعالية 3 -->
+                <div class="event-card">
+                    <div class="event-top-banner">
+                        <span class="event-badge-top">صحة ومجتمع</span>
+                        <h3>Medical Convoy</h3>
+                    </div>
+                    <div class="event-content">
+                        <div>
+                            <div class="event-meta">
+                                <i class="fa-regular fa-calendar"></i> 10 مارس 2026
+                            </div>
+                            <h4 class="event-title">تنظيم قافلة طبية شاملة لأهالي الشوبك الغربي</h4>
+                            <p class="event-desc">نظمت أمانة الحزب قافلة طبية مجانية ضمت مختلف التخصصات الطبية مع صرف الأدوية بالمجان لضمان تقديم الرعاية الصحية وكافة سبل الدعم للمواطنين.</p>
+                        </div>
+                        <div class="event-footer">
+                            <span class="event-location"><i class="fa-solid fa-location-dot"></i> مقر الوحدة الحزبية</span>
+                            <a href="#contact" class="event-btn">تم بنجاح</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- هيئة المكتب والمسؤولين -->
+        <section id="board">
+            <div class="section-title">
+                <h2>هيئة المكتب والمسؤولين</h2>
+                <p>تعرف على قيادات وأمناء أمانة الشوبك الغربي</p>
+            </div>
+
+            <div class="grid-cards">
+                
+                <!-- 1 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="ashraf.jpg" alt="الاستاذ اشرف موسي">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">أمانة التنظيم</span>
+                            <h3 class="card-name">الاستاذ اشرف موسي</h3>
+                        </div>
+                        <p class="card-role">أمين التنظيم</p>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="abed.jpg" alt="الاستاذ عابد خليفه">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">الوحدة الحزبية</span>
+                            <h3 class="card-name">الاستاذ عابد خليفه</h3>
+                        </div>
+                        <p class="card-role">أمين الوحده الحزبيه</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="emara.jpg" alt="المهندس محمد عماره">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">الاتصال</span>
+                            <h3 class="card-name">المهندس محمد عماره</h3>
+                        </div>
+                        <p class="card-role">أمين الاتصال</p>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="badr.jpg" alt="المهندس بدر الجابري">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">الإعلام والتواصل</span>
+                            <h3 class="card-name">المهندس بدر الجابري</h3>
+                        </div>
+                        <p class="card-role">أمين الاعلام ومسؤول لجنة التواصل</p>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="sherif.jpg" alt="الاستاذ شريف حسبو">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">شئون الرياضة</span>
+                            <h3 class="card-name">الاستاذ شريف حسبو</h3>
+                        </div>
+                        <p class="card-role">أمين شئون الرياضه</p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="okasha.jpg" alt="الاستاذ محمود عكاشه">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">الشباب</span>
+                            <h3 class="card-name">الاستاذ محمود عكاشه</h3>
+                        </div>
+                        <p class="card-role">أمين الشباب</p>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="maher.jpg" alt="الاستاذ محمود ماهر عجاج">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">العضوية</span>
+                            <h3 class="card-name">الاستاذ محمود ماهر عجاج</h3>
+                        </div>
+                        <p class="card-role">أمين العضويه</p>
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="azzam.jpg" alt="الاستاذ محمود عزام">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">العمل الجماهيري</span>
+                            <h3 class="card-name">الاستاذ محمود عزام</h3>
+                        </div>
+                        <p class="card-role">أمين العمل الجماهيري</p>
+                    </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="george.jpg" alt="الاستاذ جورج بباوي">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">المواطنة</span>
+                            <h3 class="card-name">الاستاذ جورج بباوي</h3>
+                        </div>
+                        <p class="card-role">أمين المواطنه</p>
+                    </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="hani.jpg" alt="المسيو هاني الجابري">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">التعليم</span>
+                            <h3 class="card-name">المسيو هاني الجابري</h3>
+                        </div>
+                        <p class="card-role">أمين التعليم</p>
+                    </div>
+                </div>
+
+                <!-- 11 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="shadeed.jpg" alt="الاستاذ مصطفي شديد">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">الصندوق</span>
+                            <h3 class="card-name">الاستاذ مصطفي شديد</h3>
+                        </div>
+                        <p class="card-role">أمين الصندوق</p>
+                    </div>
+                </div>
+
+                <!-- 12 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="ashwah.jpg" alt="المهندس احمد عامر الاشوح">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">الاسكان والمرافق</span>
+                            <h3 class="card-name">المهندس احمد عامر الاشوح</h3>
+                        </div>
+                        <p class="card-role">أمين الاسكان والمرافق</p>
+                    </div>
+                </div>
+
+                <!-- 13 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="soliman.jpg" alt="الاستاذ سليمان السنوطي">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">الشئون الطبية</span>
+                            <h3 class="card-name">الاستاذ سليمان السنوطي</h3>
+                        </div>
+                        <p class="card-role">أمين الشئون الطبيه</p>
+                    </div>
+                </div>
+
+                <!-- 14 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="ramadan.jpg" alt="الاستاذ رمضان المليجي">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">القبائل العربية</span>
+                            <h3 class="card-name">الاستاذ رمضان المليجي</h3>
+                        </div>
+                        <p class="card-role">أمين القبائل العربيه</p>
+                    </div>
+                </div>
+
+                <!-- 15 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="siddiq.jpg" alt="الاستاذ احمد صديق">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">المجالس المحلية</span>
+                            <h3 class="card-name">الاستاذ احمد صديق</h3>
+                        </div>
+                        <p class="card-role">أمين المجالس المحليه</p>
+                    </div>
+                </div>
+
+                <!-- 16 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="fahim.jpg" alt="الاستاذ فهيم حنيش">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">مساعد تعليم</span>
+                            <h3 class="card-name">الاستاذ فهيم حنيش</h3>
+                        </div>
+                        <p class="card-role">مساعد امين التعليم</p>
+                    </div>
+                </div>
+
+                <!-- 17 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="waheed.jpg" alt="الاستاذ وحيد عرفان">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">مساعد طبية</span>
+                            <h3 class="card-name">الاستاذ وحيد عرفان</h3>
+                        </div>
+                        <p class="card-role">مساعد الشئون الطبيه</p>
+                    </div>
+                </div>
+
+                <!-- 18 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="abdullah.jpg" alt="المهندس عبدالله داوود">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">مساعد شباب</span>
+                            <h3 class="card-name">المهندس عبدالله داوود</h3>
+                        </div>
+                        <p class="card-role">مساعد امين الشباب</p>
+                    </div>
+                </div>
+
+                <!-- 19 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="women.jpg" alt="أمانة المرأة">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">أمانة المرأة</span>
+                            <h3 class="card-name">أمانة المرأة</h3>
+                        </div>
+                        <p class="card-role">قطاع المرأة</p>
+                    </div>
+                </div>
+
+                <!-- 20 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="hisham.jpg" alt="الاستاذ هشام فرج">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">هيئة المكتب</span>
+                            <h3 class="card-name">الاستاذ هشام فرج</h3>
+                        </div>
+                        <p class="card-role">عضو هيئه مكتب</p>
+                    </div>
+                </div>
+
+                <!-- 21 -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="mostafa.jpg" alt="الاستاذ مصطفي خليفه">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-badge">هيئة المكتب</span>
+                            <h3 class="card-name">الاستاذ مصطفي خليفه</h3>
+                        </div>
+                        <p class="card-role">عضو هيئه مكتب</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- قسم الشكاوى والمقترحات (مرتبط بالواتساب الشخصي 01091743723) -->
+        <section id="contact" style="margin-top: 80px;">
+            <div class="section-title">
+                <h2>تواصل مع أمانة الشوبك الغربي</h2>
+                <p>لديك مقترح، شكوى، أو استفسار؟ شاركنا به وسيتم إرساله مباشرة عبر واتساب إلى المسؤول</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-box">
+                    <h3 style="color: #fff; margin-bottom: 20px; font-size: 1.25rem;">نموذج الشكاوى والمقترحات (يرسل مباشر عبر واتساب)</h3>
+                    <form class="form-grid" id="whatsappForm">
+                        <div class="form-group">
+                            <label for="name">الاسم الثلاثي *</label>
+                            <input type="text" id="name" placeholder="أدخل اسمك الكريم" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف (للتواصل معك) *</label>
+                            <input type="tel" id="phone" placeholder="010xxxxxxxx" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="type">نوع الطلب *</label>
+                            <select id="type" required>
+                                <option value="شكوى">شكوى أو خدمة عامة (إعفاء، علاج...)</option>
+                                <option value="مقترح">مقترح تطوير</option>
+                                <option value="استفسار عام">استفسار عام</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">المنطقة / الشارع بالقرية *</label>
+                            <input type="text" id="subject" placeholder="مثال: شارع الوحدة / المنطقة البحرية" required>
+                        </div>
+                        <div class="form-group span-2">
+                            <label for="details">نص الرسالة أو المقترح أو الشكوى *</label>
+                            <textarea id="details" placeholder="اكتب تفاصيل الشكوى أو المقترح بوضوح..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> إرسال الطلب الآن عبر الواتساب الشخصي
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info-panel">
+                    <div class="info-card">
+                        <h4>معلومات التواصل</h4>
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong style="color: #fff; display: block; margin-bottom: 3px;">العنوان</strong>
+                                المقر الرئيسي: أمانة الشوبك الغربي - بجوار الوحدة المحلية بالشوبك الغربي.
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <strong style="color: #fff; display: block; margin-bottom: 3px;">البريد الإلكتروني الرسمي</strong>
+                                humatelwatanshawbak@gmail.com
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>ساعات العمل الرسمية</h4>
+                        <div class="info-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                السبت إلى الخميس: من 9 صباحاً وحتى 8 مساءً
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo-area" style="margin-bottom: 12px;">
+                    <div class="logo-icon" style="width: 35px; height: 35px; font-size: 1rem;">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1 style="font-size: 1.05rem;">حزب حماة الوطن</h1>
+                    </div>
+                </div>
+                <p>أمانة الشوبك الغربي - نعمل لدعم مسيرة التنمية الشاملة وخدمة أهالينا في كل وقت وتحت كل الظروف.</p>
+                <p style="margin-top: 10px; color: var(--accent-gold); font-size: 0.85rem;">humatelwatanshawbak@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">عن الأمانة</a></li>
+                    <li><a href="#board">هيئة المكتب</a></li>
+                    <li><a href="#events">الفعاليات والأنشطة</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>تابعنا على منصات التواصل</h4>
+                <p>تابع كل جديد حول أنشطة وخدمات أمانة الشوبك الغربي</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            جميع الحقوق محفوظة &copy; 2026 <span>حزب حماة الوطن (أمانة الشوبك الغربي)</span>
+        </div>
+    </footer>
+
+    <!-- سكربت الواتساب الشخصي -->
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const type = document.getElementById('type').value;
+            const subject = document.getElementById('subject').value;
+            const details = document.getElementById('details').value;
+            
+            const message = `📋 *طلب جديد من موقع أمانة الشوبك الغربي*\n\n` +
+                            `👤 *الاسم:* ${name}\n` +
+                            `📱 *الهاتف:* ${phone}\n` +
+                            `📌 *نوع الطلب:* ${type}\n` +
+                            `📍 *المنطقة:* ${subject}\n` +
+                            `💬 *التفاصيل:* ${details}`;
+            
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappNumber = "201091743723";
+            
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+        });
+    </script>
+</body>
+</html>
